@@ -8,7 +8,6 @@ module.exports.sendEmail = function (req, res) {
     return;
   }
 
-
   try {
     const transporter = nodemailer.createTransport(config.mail.smtp);
     const mailOptions = {

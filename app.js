@@ -4,8 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('./api/models/db');
 
 var index = require('./routes/index');
+var indexApi = require('./api/routes/index');
 
 var app = express();
 
@@ -17,26 +19,43 @@ app.set('view engine', 'pug');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// cors убрать на продакшене
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  next();
+});
+
 app.use('/', index);
 
+app.use('/api', indexApi);
 
-app.use('/portfolio', (req, res) => {
+
+app.get('/portfolio', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "portfolio.html"))
 });
 
-app.use('/about', (req, res) => {
+app.get('/about', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "about.html"))
 });
 
-app.use('/blog', (req, res) => {
+app.get('/blog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "blog.html"))
 });
 
-app.use('/adminpanel', (req, res) => {
+app.get('/adminpanel/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public', "admin.html"))
+});
+app.get('/adminpanel/blog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public', "admin.html"))
+});
+app.get('/adminpanel/works', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "admin.html"))
 });
 

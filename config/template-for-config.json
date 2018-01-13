@@ -1,4 +1,11 @@
 {
+  "db": {
+    "host": "localhost",
+    "port": "27017",
+    "name": "api2017",
+    "user": "",
+    "password": ""
+  },
   "mail": {
     "subject": "Сообщение с сайта-портфолио",
     "smtp": {

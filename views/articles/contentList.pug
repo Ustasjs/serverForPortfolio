@@ -1,0 +1,4 @@
+ul.content__list
+  -for (i=0; i < articles.length; i++)
+    li.content__item
+      a.content__link(href=`#article${i}`)= articles[i].name

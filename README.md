@@ -16,6 +16,12 @@ git clone git@github.com/Ustasjs/serverForPortfolio.git
 npm install | yarn install
 ```
 
+##### Создайте конфигурационный файл
+
+```
+Согласно шаблону в config/template-for-config.json
+```
+
 ##### Запустите сборку проекта
 
 ```

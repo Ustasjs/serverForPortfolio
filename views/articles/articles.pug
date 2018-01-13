@@ -1,0 +1,8 @@
+ul.blog__list
+  -for (i=0; i < articles.length; i++)
+    li.blog__item
+      article.article.blog__article
+        h2.heading.heading_medium.article__heading(id=`article${i}`)= articles[i].name
+        .article__date= articles[i].date
+        .article__content
+          p.article__par= articles[i].content

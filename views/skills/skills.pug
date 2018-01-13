@@ -1,0 +1,12 @@
+ul#circles.circles
+    each item in skillsTypes
+      li.circles__row
+        h3.heading.circles__heading=item
+        ul.circles__inner-list
+          each skill in skills
+            if item === skill.type
+              li.circles__item
+                svg.circles-svg(width="120", height="120", class="circles-svg")
+                  circle.circle-under(cx="60", cy="60", r="50")
+                  circle#circle.circle-above(cx="60", cy="60", r="50", stroke-dasharray= ((2 * 3.1415 * 50) * skill.percents / 100) + ' 630')
+                .circles__info=skill.name
