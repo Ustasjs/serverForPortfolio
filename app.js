@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // cors убрать на продакшене
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:9000");
+  res.header("Access-Control-Allow-Origin", "http://localhost:9000, http://92.53.104.80:3000");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
