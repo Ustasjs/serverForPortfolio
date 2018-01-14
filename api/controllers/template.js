@@ -4,6 +4,7 @@ const utils = require('../../utils');
 const articles = './views/articles/articles.pug';
 const contentList = './views/articles/contentList.pug';
 const skills = './views/skills/skills.pug';
+const slider = './views/slider/slider.pug';
 
 
 module.exports.getBlogTemplate = function (req, res) {
@@ -12,7 +13,7 @@ module.exports.getBlogTemplate = function (req, res) {
 
   Blog.find()
     .then(items => {
-      items = items.map(elem => utils.toClient(elem));
+      items = items.map(elem => utils.dateForBlog(elem));
       const locals = { articles: items };
 
       resultData.articles = pug.renderFile(articles, locals);
@@ -42,6 +43,27 @@ module.exports.getSkillsTemplate = function (req, res) {
       const locals = { skills: items, skillsTypes };
 
       resultData = pug.renderFile(skills, locals);
+
+      res.status(200).json(resultData);
+    })
+    .catch(e => {
+      console.log(e);
+      res.status(400).json({ message: `Произошла ошибка ${err.message}` });
+    })
+}
+
+
+module.exports.getPortfolioTemplate = function (req, res) {
+  let resultData = {};
+  const Blog = mongoose.model('work');
+
+  Blog.find()
+    .then(items => {
+      items = items.map(elem => utils.toClient(elem));
+      const locals = { works: items };
+
+      resultData.html = pug.renderFile(slider, locals);
+      resultData.data = items;
 
       res.status(200).json(resultData);
     })

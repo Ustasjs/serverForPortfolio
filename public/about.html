@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGxGM4std4Q43_Ya5ubE_UDetPq7WUh0o"></script>
-    <title>Обо мне</title>
+    <title>About page</title>
   <link href="./css/common.css" rel="stylesheet"><link href="./css/about.css" rel="stylesheet"><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/about.js"></script></head>
   <body>
     <div class="wrapper">
@@ -13,10 +13,10 @@
         <div class="modal__left"></div>
                 <nav class="nav modal__nav nav_vertical modal__nav_hidden">
                   <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="portfolio">Мои работы</a></li>
-                    <li class="nav__item"><a class="nav__link" href="about">Обо мне</a></li>
-                    <li class="nav__item"><a class="nav__link" href="blog">Блог</a></li>
-                    <li class="nav__item"><a class="nav__link" href="/">Авторизация</a></li>
+                    <li class="nav__item"><a class="nav__link" href="portfolio.html">Мои работы</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                    <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
                   </ul>
                 </nav>
         <div class="modal__right"></div>
@@ -422,78 +422,11 @@
               <div class="heading__content">Чем я могу быть </div>
               <div class="heading__second-line">вам полезен</div>
             </h2>
-            <div class="skills__main">
+            <div class="skills__main" id="skillsContainer">
               <div class="skills__content">
                 <p class="skills__paragraph">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
               </div>
-              <div class="skills__circles">
-                                <ul class="circles" id="circles">
-                                  <li class="circles__row">
-                                    <h3 class="heading circles__heading">Frontend</h3>
-                                    <ul class="circles__inner-list">
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="219.90500000000003 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">HTML5</div>
-                                      </li>
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="251.32000000000005 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">CSS3</div>
-                                      </li>
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="235.61250000000004 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">JavaScript</div>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li class="circles__row">
-                                    <h3 class="heading circles__heading">Backend</h3>
-                                    <ul class="circles__inner-list">
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="109.95250000000001 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">Node.js</div>
-                                      </li>
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="62.83000000000001 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">Mongo.DB</div>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li class="circles__row">
-                                    <h3 class="heading circles__heading">WorkFlow</h3>
-                                    <ul class="circles__inner-list">
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="219.90500000000003 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">Git</div>
-                                      </li>
-                                      <li class="circles__item">
-                                        <svg class="circles-svg circles-svg" width="120" height="120">
-                                          <circle class="circle-under" cx="60" cy="60" r="50"></circle>
-                                          <circle class="circle-above" id="circle" cx="60" cy="60" r="50" stroke-dasharray="219.90500000000003 630"></circle>
-                                        </svg>
-                                        <div class="circles__info">Webpack</div>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                </ul>
-              </div>
+              <div class="skills__circles" id="skills"></div>
             </div>
           </div>
         </section>
@@ -515,10 +448,10 @@
         <div class="footer__row">
                     <nav class="nav footer__nav nav_horizontal nav_color_white">
                       <ul class="nav__list">
-                        <li class="nav__item"><a class="nav__link" href="portfolio">Мои работы</a></li>
-                        <li class="nav__item"><a class="nav__link" href="about">Обо мне</a></li>
-                        <li class="nav__item"><a class="nav__link" href="blog">Блог</a></li>
-                        <li class="nav__item"><a class="nav__link" href="/">Авторизация</a></li>
+                        <li class="nav__item"><a class="nav__link" href="portfolio.html">Мои работы</a></li>
+                        <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                        <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
                       </ul>
                     </nav>
           <div class="footer__socials">

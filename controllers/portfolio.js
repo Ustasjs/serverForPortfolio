@@ -3,8 +3,8 @@ const config = require('../config/config.json');
 
 
 module.exports.sendEmail = function (req, res) {
-  if (!req.body.name || !req.body.name || !req.body.message) {
-    // добавить обработку ошибок
+  if (!req.body.name || !req.body.email || !req.body.message) {
+    return res.status(400).json({ message: "Все поля обязательны для заполнения" });
     return;
   }
 
@@ -22,15 +22,15 @@ module.exports.sendEmail = function (req, res) {
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
-      // добавить обработку ошибок
       if (error) {
-        console.log(error.message);
+        return res.status(400).json({ message: `$При отправке письма произошла ошибка: ${error.message}` });
       }
 
-      res.redirect('/portfolio')
+      res.status(200).json({ message: "Сообщение отправлено" });
       return;
     })
   } catch (error) {
     console.log(error);
+    return res.status(400).json({ message: `$Произошла ошибка: ${error.message}` });
   }
 }

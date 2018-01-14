@@ -1,88 +1,65 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio page</title>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/portfolio.css" rel="stylesheet"><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/portfolio.js"></script></head>
+  <body>
+<div class="preloader-modal" id="preloaderModal">
+  <div class="preloader"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+<circle class="outerCircle" opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    " cx="72" cy="71.999" r="70"/>
+<circle class="middleCircle" opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    " cx="72" cy="72" r="55"/>
+<circle class="innerCircle" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"/>
+<text id='spinnerText' transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="20">100</text>
+</svg>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Мои работы</title>
-	<link href="./css/common.css" rel="stylesheet">
-	<link href="./css/portfolio.css" rel="stylesheet">
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/portfolio.js"></script>
-</head>
-
-<body>
-	<div class="preloader-modal" id="preloaderModal">
-		<div class="preloader">
-			<?xml version="1.0" encoding="utf-8"?>
-			<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			 width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
-				<circle class="outerCircle" opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    "
-				 cx="72" cy="71.999" r="70" />
-				<circle class="middleCircle" opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    "
-				 cx="72" cy="72" r="55" />
-				<circle class="innerCircle" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40" />
-				<text id='spinnerText' transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="20">100</text>
-			</svg>
-
-		</div>
-	</div>
-	<div class="wrapper">
-		<div class="modal" id="modal">
-			<div class="modal__left"></div>
-			<nav class="nav modal__nav nav_vertical modal__nav_hidden">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a class="nav__link" href="portfolio">Мои работы</a>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="about">Обо мне</a>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="blog">Блог</a>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="/">Авторизация</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="modal__right"></div>
-		</div>
-		<div class="burger burger_header">
-			<div class="burger__line"></div>
-			<div class="burger__line"></div>
-			<div class="burger__line"></div>
-		</div>
-		<header class="header">
-			<div class="socials_color_white">
-				<ul class="socials">
-					<li class="social__item">
-						<a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru-ru.facebook.com/people/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2-%D0%A3%D1%81%D1%82%D1%8E%D0%B6%D0%B0%D0%BD%D0%B8%D0%BD/100012321937974">
-							<?xml version="1.0" encoding="iso-8859-1"?>
-							<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 viewBox="0 0 155.139 155.139" width="21px" height="40px" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
-								<g>
-									<path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+  </div>
+</div>
+    <div class="wrapper">
+      <div class="modal" id="modal">
+        <div class="modal__left"></div>
+                <nav class="nav modal__nav nav_vertical modal__nav_hidden">
+                  <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="portfolio.html">Мои работы</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                    <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
+                  </ul>
+                </nav>
+        <div class="modal__right"></div>
+      </div>
+            <div class="burger burger_header">
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+            </div>
+      <header class="header">
+        <div class="socials_color_white">
+                    <ul class="socials">
+                      <li class="social__item"><a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru-ru.facebook.com/people/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2-%D0%A3%D1%81%D1%82%D1%8E%D0%B6%D0%B0%D0%BD%D0%B8%D0%BD/100012321937974"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 155.139 155.139" width="21px" height="40px"  style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+<g>
+	<path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
 		c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
-		v20.341H37.29v27.585h23.814v70.761H89.584z" />
-								</g>
-							</svg>
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="social__icon social__icon_gh" target="_blank" rel="nofollow noopener" href="https://github.com/Ustasjs">
-							<?xml version="1.0" encoding="utf-8"?>
-							<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-							<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 width="26px" height="22px" viewBox="0 0 26 22" enable-background="new 0 0 26 22" xml:space="preserve">
-								<g>
-									<path d="M25.047,17.422C22.984,21.594,17.313,22,13.25,22c-4.125,0-10.141-0.359-12.281-4.578
+		v20.341H37.29v27.585h23.814v70.761H89.584z"/>
+</g>
+</svg>
+</a></li>
+                      <li class="social__item"><a class="social__icon social__icon_gh" target="_blank" rel="nofollow noopener" href="https://github.com/Ustasjs"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="26px" height="22px" viewBox="0 0 26 22" enable-background="new 0 0 26 22" xml:space="preserve">
+<g>
+	<path d="M25.047,17.422C22.984,21.594,17.313,22,13.25,22c-4.125,0-10.141-0.359-12.281-4.578
 		C0.172,15.844,0,13.984,0,12.25c0-2.281,0.625-4.438,2.125-6.188C1.844,5.203,1.703,4.297,1.703,3.406
 		C1.703,2.234,1.969,1.063,2.5,0c2.469,0,4.047,1.078,5.922,2.547C10,2.172,11.625,2,13.25,2c1.469,0,2.953,0.156,4.375,0.5
 		C19.484,1.047,21.063,0,23.5,0c0.531,1.063,0.797,2.234,0.797,3.406c0,0.891-0.141,1.781-0.422,2.625
@@ -90,51 +67,42 @@
 		C14.641,10.953,13.828,11,13,11s-1.641-0.047-2.453-0.172C9.531,10.688,8.531,10.5,7.5,10.5c-2.547,0-4,2.109-4,4.5
 		c0,4.781,4.375,5.516,8.188,5.516h2.625c3.813,0,8.188-0.734,8.188-5.516C22.5,12.609,21.047,10.5,18.5,10.5z M8,18
 		c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3S9.406,18,8,18z M18,18c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3
-		S19.406,18,18,18z" />
-								</g>
-							</svg>
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru.linkedin.com">
-							<?xml version="1.0" encoding="utf-8"?>
-							<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-							<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 width="24px" height="22.938px" viewBox="0 0 24 22.938" enable-background="new 0 0 24 22.938" xml:space="preserve">
-								<g>
-									<path d="M2.875,5.344H2.844C1.109,5.344,0,4.156,0,2.672C0,1.156,1.156,0,2.906,0c1.766,0,2.859,1.156,2.875,2.672
+		S19.406,18,18,18z"/>
+</g>
+</svg>
+</a></li>
+                      <li class="social__item"><a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru.linkedin.com"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="22.938px" viewBox="0 0 24 22.938" enable-background="new 0 0 24 22.938" xml:space="preserve">
+<g>
+	<path d="M2.875,5.344H2.844C1.109,5.344,0,4.156,0,2.672C0,1.156,1.156,0,2.906,0c1.766,0,2.859,1.156,2.875,2.672
 		C5.797,4.156,4.672,5.344,2.875,5.344z M5.453,22.938H0.297V7.453h5.156V22.938z M24,22.938h-5.141v-8.281
 		c0-2.078-0.75-3.5-2.609-3.5c-1.422,0-2.266,0.953-2.641,1.875c-0.125,0.344-0.172,0.797-0.172,1.266v8.641H8.297
 		c0.063-14.031,0-15.484,0-15.484h5.141v2.25h-0.031c0.672-1.063,1.891-2.609,4.672-2.609c3.391,0,5.922,2.219,5.922,6.969V22.938z"
-									/>
-								</g>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</header>
-		<div class="main">
-			<section class="section section_main">
-				<div class="parallax" id="parallax">
-					<img class="parallax__image" src="images/ceab31a7d1e9f06b1130d47f65bc2d59.jpg">
-				</div>
-				<div class="user user_main" id="user">
-					<div class="user__wrap">
-						<img class="user__img" src="images/1a3938ea32883c7272dbc496ecc4edbb.jpg" alt="Мое фото">
-					</div>
-					<h2 class="user__heading heading heading_main-logo">Устюжанин Станислав</h2>
-					<div class="user__info">Личный сайт веб разработчика</div>
-				</div>
-				<div class="bg-word bg-word_big main__bg-word" id="bgWord">
-					<?xml version="1.0" encoding="utf-8"?>
-					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 viewBox="0 0 1175.495 313.961" enable-background="new 0 0 1175.495 313.961" xml:space="preserve">
-						<g>
-							<path fill="#FEFEFE" d="M188.27,83.146c0-1.56-1.9,6.59-5.695,24.455c-0.225,0.225-0.785,0.895-1.675,2.01l0.335,0.67
+		/>
+</g>
+</svg>
+</a></li>
+                    </ul>
+        </div>
+      </header>
+      <div class="main">
+        <section class="section section_main">
+          <div class="parallax" id="parallax"><img class="parallax__image" src="images/ceab31a7d1e9f06b1130d47f65bc2d59.jpg"></div>
+                    <div class="user user_main" id="user">
+                      <div class="user__wrap"><img class="user__img" src="images/1a3938ea32883c7272dbc496ecc4edbb.jpg" alt="Мое фото"></div>
+                      <h2 class="user__heading heading heading_main-logo">Устюжанин Станислав</h2>
+                      <div class="user__info">Личный сайт веб разработчика</div>
+                    </div>
+          <div class="bg-word bg-word_big main__bg-word" id="bgWord"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1175.495 313.961" enable-background="new 0 0 1175.495 313.961"
+	 xml:space="preserve">
+<g>
+	<path fill="#FEFEFE" d="M188.27,83.146c0-1.56-1.9,6.59-5.695,24.455c-0.225,0.225-0.785,0.895-1.675,2.01l0.335,0.67
 		c-0.45,0.45-0.895,1.565-1.34,3.35c-0.45,0.895-1.34,1.79-2.68,2.68l-9.38,14.07c-2.46,3.575-3.685,6.03-3.685,7.37
 		c-2.46,2.01-6.145,4.915-11.055,8.71c-13.4,8.04-26.02,15.19-37.855,21.44c-6.7,3.35-12.285,4.69-16.75,4.02
 		c-0.45,0-0.728-0.167-0.837-0.502c-0.115-0.335-0.393-0.502-0.837-0.502c-0.895-0.22-2.57,0-5.025,0.67
@@ -303,8 +271,8 @@
 		c-0.225-0.22-0.56-0.335-1.005-0.335c-1.12-0.22-2.235,0.115-3.35,1.005c0.67,0.67,1.675,1.12,3.015,1.34
 		c-2.46,2.905-5.695,5.476-9.715,7.705v-2.01c0.67-0.22,1.56-0.555,2.68-1.005l-3.015-0.335c5.36-4.69,10.605-10.16,15.745-16.415
 		c0.22-0.67,0.89-1.895,2.01-3.685l3.35-3.685l0.335-2.345c1.785-2.68,4.355-6.81,7.705-12.395c0-1.34,0.11-2.79,0.335-4.355
-		c0.445-1.115,1.225-1.56,2.345-1.34L175.205,97.551z" />
-							<path fill="#FEFEFE" d="M323.606,164.216c0,4.02-1.675,9.94-5.025,17.755c-1.34,3.8-3.24,9.83-5.695,18.09
+		c0.445-1.115,1.225-1.56,2.345-1.34L175.205,97.551z"/>
+	<path fill="#FEFEFE" d="M323.606,164.216c0,4.02-1.675,9.94-5.025,17.755c-1.34,3.8-3.24,9.83-5.695,18.09
 		c-2.68,2.905-6.48,7.82-11.39,14.74l1.675-3.35c1.34-2.455,1.785-3.905,1.34-4.355c-1.791,2.46-4.245,6.48-7.37,12.06
 		c-1.34,1.12-3.35,3.24-6.03,6.365c-1.34,2.46-3.24,6.03-5.695,10.72c-5.81,8.265-12.285,14.965-19.43,20.1
 		c-12.285,9.16-20.435,13.734-24.455,13.734c-0.67,0-1.675-0.225-3.015-0.67c-1.34-0.449-2.235-0.67-2.68-0.67
@@ -333,8 +301,8 @@
 		c-0.67-0.89-1.565-1.895-2.68-3.015c0.67,0,1.56,0.167,2.68,0.502C267.102,157.348,267.881,157.516,268.332,157.516z
 		 M238.517,108.605h-2.01v-1.34h2.01V108.605z M252.921,108.94c-2.46,0.67-7.485,2.345-15.075,5.025h3.015
 		C242.202,114.191,246.222,112.516,252.921,108.94z M242.872,106.931h-2.01v-1.34h2.01V106.931z M257.611,178.956h-1.675v-1.34
-		h1.675V178.956z M317.242,124.016h-1.34V121h1.34V124.016z" />
-							<path fill="#FEFEFE" d="M317.574,86.831c3.125-1.34,5.58-2.345,7.37-3.015c0.22,2.68,0.335,4.47,0.335,5.36
+		h1.675V178.956z M317.242,124.016h-1.34V121h1.34V124.016z"/>
+	<path fill="#FEFEFE" d="M317.574,86.831c3.125-1.34,5.58-2.345,7.37-3.015c0.22,2.68,0.335,4.47,0.335,5.36
 		c-4.47,1.79-6.365,2.68-5.695,2.68c-0.225,0-0.785-0.335-1.675-1.005L317.574,86.831z M326.284,168.571l0.335-1.34l-0.335-3.35
 		c2.455-5.805,4.69-8.82,6.7-9.045c1.56,0,3.015,1.005,4.355,3.015c0.445,1.34,1.115,2.57,2.01,3.685
 		c0.445-0.22,1.115-0.335,2.01-0.335c2.229,0,3.46,1.675,3.685,5.025c0.22,6.48-1.565,9.715-5.36,9.715
@@ -419,8 +387,8 @@
 		h1.005C450.789,155.506,450.904,154.951,450.904,154.5z M452.914,137.416l-0.67-3.35h1.005l0.67,3.015L452.914,137.416z
 		 M456.264,139.091c0.89,3.35,1.45,5.25,1.675,5.695c-2.01-3.35-3.13-5.245-3.35-5.695c0-0.445,0.11-1.005,0.335-1.675
 		c0.22-0.67,0.335-1.115,0.335-1.34c0.89,0.67,1.56,1.005,2.01,1.005C457.269,137.306,456.934,137.976,456.264,139.091z
-		 M461.958,146.795h-0.67v2.01h0.67V146.795z" />
-							<path fill="#FEFEFE" d="M463.63,228.201c-0.45,2.46-1.455,3.575-3.015,3.35c-0.45,0-2.125-1.56-5.025-4.69
+		 M461.958,146.795h-0.67v2.01h0.67V146.795z"/>
+	<path fill="#FEFEFE" d="M463.63,228.201c-0.45,2.46-1.455,3.575-3.015,3.35c-0.45,0-2.125-1.56-5.025-4.69
 		c0.22-1.34-0.67-2.9-2.68-4.69c-0.225-1.34-0.335-2.12-0.335-2.345c0.67,0,1.34,0.45,2.01,1.34l2.68-2.01
 		c1.115-0.89,1.895-1.34,2.345-1.34C462.065,218.266,463.405,221.726,463.63,228.201z M459.275,61.371
 		c0,0.45-0.167,1.005-0.502,1.675c-0.335,0.67-0.502,1.121-0.502,1.34c-1.12-0.22-2.235-0.22-3.35,0
@@ -475,8 +443,8 @@
 		h-1.005l0.335-1.34h1.005L556.76,46.295z M577.195,47.636c-0.225,2.235-2.01,4.135-5.36,5.695c-0.67-0.89-1.005-1.56-1.005-2.01
 		c0.22-0.89,1.057-2.12,2.512-3.685c1.45-1.56,2.623-2.455,3.518-2.68C577.305,45.625,577.415,46.521,577.195,47.636z
 		 M619.069,47.971c-2.01,1.34-3.574,1.9-4.689,1.675l-0.67-0.67l0.336-2.01c0.443-0.445,2.01-1.225,4.689-2.345l1.004,0.67
-		L619.069,47.971z" />
-							<path fill="#FEFEFE" d="M571.833,211.786h-2.345v-1.34h2.345V211.786z M579.203,207.431l-3.015,1.005
+		L619.069,47.971z"/>
+	<path fill="#FEFEFE" d="M571.833,211.786h-2.345v-1.34h2.345V211.786z M579.203,207.431l-3.015,1.005
 		c-1.34,2.68-2.01,3.35-2.01,2.01c0-0.445,0.335-1.115,1.005-2.01c-1.115,0.45-2.9,0-5.36-1.34c0,0.45,0.56,0.67,1.675,0.67
 		l6.7-2.01C578.868,206.651,579.203,207.211,579.203,207.431z M577.527,211.116l-3.35,2.01l-0.335-1.005l2.68-2.01L577.527,211.116z
 		 M579.873,195.371l-3.685,3.685l-0.335-1.005l3.35-3.35L579.873,195.371z M795.278,163.545c-1.34,0-2.57,0.785-3.686,2.345
@@ -538,8 +506,8 @@
 		C682.382,17.486,686.513,17.266,692.097,16.815z M716.218,158.186h-4.355v-1.005h4.355V158.186z M722.583,157.516h-4.691v-1.34
 		h4.691V157.516z M727.608,156.511h-4.355v-1.005h4.355V156.511z M733.638,156.176h-5.025v-1.005h5.025V156.176z M735.647,32.561
 		l-0.334,1.005l-2.012-1.005v-0.67L735.647,32.561z M739.333,155.506h-3.686v-1.34h3.686V155.506z M763.788,214.466h-2.346v-1.005
-		h2.346V214.466z" />
-							<path fill="#FEFEFE" d="M854.905,164.216c0,4.02-1.674,9.94-5.025,17.755c-1.34,3.8-3.238,9.83-5.693,18.09
+		h2.346V214.466z"/>
+	<path fill="#FEFEFE" d="M854.905,164.216c0,4.02-1.674,9.94-5.025,17.755c-1.34,3.8-3.238,9.83-5.693,18.09
 		c-2.682,2.905-6.48,7.82-11.391,14.74l1.676-3.35c1.34-2.455,1.783-3.905,1.34-4.355c-1.791,2.46-4.246,6.48-7.371,12.06
 		c-1.34,1.12-3.35,3.24-6.029,6.365c-1.34,2.46-3.24,6.03-5.695,10.72c-5.811,8.265-12.285,14.965-19.43,20.1
 		c-12.285,9.16-20.436,13.734-24.455,13.734c-0.67,0-1.676-0.225-3.016-0.67c-1.34-0.449-2.234-0.67-2.68-0.67
@@ -568,8 +536,8 @@
 		c-0.67-0.89-1.564-1.895-2.68-3.015c0.67,0,1.559,0.167,2.68,0.502C798.401,157.348,799.181,157.516,799.63,157.516z
 		 M769.815,108.605h-2.01v-1.34h2.01V108.605z M784.222,108.94c-2.461,0.67-7.486,2.345-15.076,5.025h3.016
 		C773.501,114.191,777.521,112.516,784.222,108.94z M774.171,106.931h-2.01v-1.34h2.01V106.931z M788.911,178.956h-1.676v-1.34
-		h1.676V178.956z M848.54,124.016h-1.34V121h1.34V124.016z" />
-							<path fill="#FEFEFE" d="M927.933,225.855c-1.121,0.895-5.25,3.24-12.395,7.035c0.445,0.895,0.779,1.34,1.004,1.34
+		h1.676V178.956z M848.54,124.016h-1.34V121h1.34V124.016z"/>
+	<path fill="#FEFEFE" d="M927.933,225.855c-1.121,0.895-5.25,3.24-12.395,7.035c0.445,0.895,0.779,1.34,1.004,1.34
 		c0.891,0,1.676-0.335,2.346-1.005c-0.225,0.67-0.336,1.12-0.336,1.34c-0.449,0.225-0.225,0.335,0.67,0.335
 		c0.67,0,1.115-0.335,1.342-1.005c0.67,1.34,0.889,2.795,0.67,4.355c-0.227,1.565-0.561,2.57-1.006,3.015
 		c-3.801,1.34-8.154,4.135-13.064,8.375c-0.227,0-0.67-0.22-1.34-0.67c-0.67-0.445-1.23-0.67-1.676-0.67
@@ -621,8 +589,8 @@
 		 M911.183,256.341c-0.225,0-0.617,0.167-1.172,0.502c-0.561,0.335-1.174,0.393-1.844,0.167l-4.02-0.335
 		c1.115-0.89,2.455-1.225,4.02-1.005L911.183,256.341z M915.202,215.136l-1.674,2.345l-0.67-1.005l1.674-2.01L915.202,215.136z
 		 M920.563,117.986l-1.342-0.335l0.336-3.35l1.34,0.335L920.563,117.986z M920.563,216.476h-1.342l0.336-2.01l1.006,0.335V216.476z
-		 M921.903,104.92h-1.34l0.334-3.35h1.34L921.903,104.92z M927.263,224.181h-1.006l-1.004,2.68h1.004L927.263,224.181z" />
-							<path fill="#FEFEFE" d="M1027.763,233.226c-3.576,2.46-5.361,4.135-5.361,5.025c-0.225,0.67,0.221,1.12,1.34,1.34
+		 M921.903,104.92h-1.34l0.334-3.35h1.34L921.903,104.92z M927.263,224.181h-1.006l-1.004,2.68h1.004L927.263,224.181z"/>
+	<path fill="#FEFEFE" d="M1027.763,233.226c-3.576,2.46-5.361,4.135-5.361,5.025c-0.225,0.67,0.221,1.12,1.34,1.34
 		c-0.895,0.895-4.02,3.575-9.379,8.04c-0.451,0.45-0.67,1.12-0.67,2.01c-1.791,2.01-3.91,4.245-6.365,6.7
 		c-1.121,1.12-3.131,3.015-6.031,5.695c-2.459,1.564-5.693,3.91-9.715,7.035l-0.334,0.67l1.674-1.006
 		c-0.225,0.221-0.449,0.555-0.67,1.006c0,0.445,0.221,0.891,0.67,1.34c-1.34,0.67-2.795,0.891-4.354,0.67
@@ -670,8 +638,8 @@
 		c-0.451,1.12-0.67,2.905-0.67,5.36c1.34,0,2.898,0.895,4.689,2.68L1034.796,80.466z M978.183,87.166l-0.67-0.335l-0.336-1.34h0.67
 		L978.183,87.166z M985.888,245.621l-0.67-1.005l-1.676,1.005l0.334,0.67L985.888,245.621z M986.892,64.051h-0.67l-1.004,1.005
 		l0.67,0.335L986.892,64.051z M1015.032,237.246v-0.335l-1.34,0.335v0.67L1015.032,237.246z M1029.437,86.496l-0.67,1.005
-		l-0.67-0.335l0.336-1.34L1029.437,86.496z" />
-							<path fill="#FEFEFE" d="M1175.495,164.216c0,4.02-1.674,9.94-5.025,17.755c-1.34,3.8-3.238,9.83-5.693,18.09
+		l-0.67-0.335l0.336-1.34L1029.437,86.496z"/>
+	<path fill="#FEFEFE" d="M1175.495,164.216c0,4.02-1.674,9.94-5.025,17.755c-1.34,3.8-3.238,9.83-5.693,18.09
 		c-2.682,2.905-6.48,7.82-11.391,14.74l1.676-3.35c1.34-2.455,1.783-3.905,1.34-4.355c-1.791,2.46-4.246,6.48-7.371,12.06
 		c-1.34,1.12-3.35,3.24-6.029,6.365c-1.34,2.46-3.24,6.03-5.695,10.72c-5.811,8.265-12.285,14.965-19.43,20.1
 		c-12.285,9.16-20.436,13.734-24.455,13.734c-0.67,0-1.676-0.225-3.016-0.67c-1.34-0.449-2.234-0.67-2.68-0.67
@@ -700,302 +668,173 @@
 		c-0.67-0.89-1.564-1.895-2.68-3.015c0.67,0,1.559,0.167,2.68,0.502C1118.991,157.348,1119.771,157.516,1120.22,157.516z
 		 M1090.405,108.605h-2.01v-1.34h2.01V108.605z M1104.812,108.94c-2.461,0.67-7.486,2.345-15.076,5.025h3.016
 		C1094.091,114.191,1098.11,112.516,1104.812,108.94z M1094.761,106.931h-2.01v-1.34h2.01V106.931z M1109.501,178.956h-1.676v-1.34
-		h1.676V178.956z M1169.13,124.016h-1.34V121h1.34V124.016z" />
-						</g>
-					</svg>
+		h1.676V178.956z M1169.13,124.016h-1.34V121h1.34V124.016z"/>
+</g>
+</svg>
 
-				</div>
-				<button class="arrow main__arrow" id="arrowDown">
-					<?xml version="1.0" encoding="utf-8"?>
-					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-					<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-					 x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
-						<g>
-							<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
+          </div>
+          <button class="arrow main__arrow" id="arrowDown"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
 		l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578
-		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z" />
-						</g>
-					</svg>
+		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z"/>
+</g>
+</svg>
 
-				</button>
-			</section>
-			<section class="section section_split" id="skillsSection">
-				<div class="triangles triangles__singlecolor">
-					<?xml version="1.0" encoding="utf-8"?>
-					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-					<svg viewbox="0 0 1000 100" preserveaspectratio="none" class="triangles-box">
-						<polygon class="triangles__left" points="0,0 0,101 501,101 501,100"></polygon>
-						<polygon class="triangles__right" points="1000,0 1000,101 500,101 500,100"></polygon>
-					</svg>
-				</div>
-				<div class="projects">
-					<div class="projects__head">
-						<h1 class="projects__heading heading heading_big">
-							<div class="heading__content">Мои работы</div>
-						</h1>
-					</div>
-				</div>
-				<div class="slider" id="slider">
-					<div class="info slider__info">
-						<div class="info__wrap">
-							<h3 class="info__heading heading heading_medium">
-								<div class="heading__content" id="headingContent">Работа 1</div>
-							</h3>
-							<div class="info__stack" id="stackContent">HTML, CSS, JavaScript</div>
-							<a class="info__link" id="infoLink" href="#">
-								<!--include ../../static/images/otherIcons/link.svg-->
-								<span class="info__link-text">Посмотреть сайт</span>
-							</a>
-						</div>
-					</div>
-					<div class="slider__main">
-						<ul class="slider__list">
-							<li class="slider__main-wrap slider__main-wrap_active">
-								<img class="slider__img" src="images/c11df99f3625e6107e19d35447f54d3b.png" alt="Текущий проект">
-							</li>
-							<li class="slider__main-wrap">
-								<img class="slider__img" src="images/7dac111cc29deb8780ca707dd2f529e6.png" alt="Текущий проект">
-							</li>
-							<li class="slider__main-wrap">
-								<img class="slider__img" src="images/8eef8bbce3f5dce30d44e022a480580e.png" alt="Текущий проект">
-							</li>
-							<li class="slider__main-wrap">
-								<img class="slider__img" src="images/ddff59c811194c8711f19fab7031ff49.png" alt="Текущий проект">
-							</li>
-						</ul>
-					</div>
-					<div class="slider__controls">
-						<div class="slider__control">
-							<ul class="slider__list slider__list_down">
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/c11df99f3625e6107e19d35447f54d3b.png" alt="Предыдущий проект">
-								</li>
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/7dac111cc29deb8780ca707dd2f529e6.png" alt="Предыдущий проект">
-								</li>
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/8eef8bbce3f5dce30d44e022a480580e.png" alt="Предыдущий проект">
-								</li>
-								<li class="slider__wrap slider__wrap_active">
-									<img class="slider__img" src="images/ddff59c811194c8711f19fab7031ff49.png" alt="Предыдущий проект">
-								</li>
-							</ul>
-							<div class="slider__button slider__button_down">
-								<div class="slider__arrow-img slider__arrow-img_down">
-									<?xml version="1.0" encoding="utf-8"?>
-									<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-									<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-									<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-									 x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
-										<g>
-											<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
+          </button>
+        </section>
+        <section class="section section_split" id="skillsSection">
+                    <div class="triangles triangles__singlecolor"><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewbox="0 0 1000 100" preserveaspectratio="none" class="triangles-box">
+    <polygon class="triangles__left" points="0,0 0,101 501,101 501,100"></polygon>
+    <polygon class="triangles__right" points="1000,0 1000,101 500,101 500,100"></polygon>
+</svg>
+                    </div>
+          <div class="projects">
+            <div class="projects__head">
+              <h1 class="projects__heading heading heading_big">
+                <div class="heading__content">Мои работы</div>
+              </h1>
+            </div>
+          </div>
+          <div class="slider" id="slider"></div>
+        </section>
+        <section class="section section_solid">
+          <div class="solid__background"><img class="solid__img" src="images/4a1a4319153cc4a5027fa6eb74e20a9f.jpg"></div>
+          <div class="feedback">
+            <div class="feedback__head">
+              <h2 class="feedback__heading heading heading_big">
+                <div class="heading__content">Что обо мне</div>
+                <div class="heading__second-line">говорят</div>
+              </h2>
+            </div>
+            <div class="comments">
+              <ul class="comments__list">
+                <li class="comments__item">
+                  <div class="comments__icon">
+                    <!--include ../../static/images/otherIcons/quote-left.svg-->
+                  </div>
+                  <div class="comments__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+                  <div class="comments__user">
+                    <div class="comments__avatar"><img class="comments__img" src="images/49be47003c300d3379cf7b5baa1bdc1e.jpg"></div>
+                    <div class="comments__name-wrap">
+                      <div class="comments__user-name">Ковальчук Дмитрий</div>
+                      <div class="comments__user-status">основатель Loftschool</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="comments__item">
+                  <div class="comments__icon">
+                    <!--include ../../static/images/otherIcons/quote-left.svg-->
+                  </div>
+                  <div class="comments__content">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+                  <div class="comments__user">
+                    <div class="comments__avatar"><img class="comments__img" src="images/16a72bfe05c4da42694cce257771da79.jpg"></div>
+                    <div class="comments__name-wrap">
+                      <div class="comments__user-name">Сабанцев Владимир</div>
+                      <div class="comments__user-status">преподаватель</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-form" id="contact-form">
+              <div class="contact-form__blur" id="blur"></div>
+              <form class="contact-form__form" id="contacts" action="/contact" method="POST" enctype="application/x-www-form-urlencoded">
+                <h3 class="contact-form__heading heading heading_medium">
+                  <div class="heading__content">Связаться со мной</div>
+                </h3>
+                <input class="contact-form__input" id="name" name="name" placeholder="Имя">
+                <input class="contact-form__input" id="email" name="email" type="email" placeholder="Email">
+                <textarea class="contact-form__textarea" id="message" name="message" placeholder="Ваше сообщение"></textarea>
+              </form>
+              <div class="contact-form__controls">
+                <button class="contact-form__button" type="submit" form="contacts">Отправить</button>
+                <button class="contact-form__button" type="reset" form="contacts">Очистить</button>
+              </div>
+            </div>
+            <button class="arrow feedback__arrow" id="arrowUp"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
 		l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578
-		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z" />
-										</g>
-									</svg>
+		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z"/>
+</g>
+</svg>
 
-								</div>
-							</div>
-						</div>
-						<div class="slider__control">
-							<ul class="slider__list slider__list_up">
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/c11df99f3625e6107e19d35447f54d3b.png" alt="Следующий проект">
-								</li>
-								<li class="slider__wrap slider__wrap_active">
-									<img class="slider__img" src="images/7dac111cc29deb8780ca707dd2f529e6.png" alt="Следующий проект">
-								</li>
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/8eef8bbce3f5dce30d44e022a480580e.png" alt="Следующий проект">
-								</li>
-								<li class="slider__wrap">
-									<img class="slider__img" src="images/ddff59c811194c8711f19fab7031ff49.png" alt="Следующий проект">
-								</li>
-							</ul>
-							<div class="slider__button slider__button_up">
-								<div class="slider__arrow-img slider__arrow-img_up">
-									<?xml version="1.0" encoding="utf-8"?>
-									<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-									<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-									<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-									 x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
-										<g>
-											<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
-		l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578
-		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z" />
-										</g>
-									</svg>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section section_solid">
-				<div class="solid__background">
-					<img class="solid__img" src="images/4a1a4319153cc4a5027fa6eb74e20a9f.jpg">
-				</div>
-				<div class="feedback">
-					<div class="feedback__head">
-						<h2 class="feedback__heading heading heading_big">
-							<div class="heading__content">Что обо мне</div>
-							<div class="heading__second-line">говорят</div>
-						</h2>
-					</div>
-					<div class="comments">
-						<ul class="comments__list">
-							<li class="comments__item">
-								<div class="comments__icon">
-									<!--include ../../static/images/otherIcons/quote-left.svg-->
-								</div>
-								<div class="comments__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и
-									бессонных ночей!</div>
-								<div class="comments__user">
-									<div class="comments__avatar">
-										<img class="comments__img" src="images/49be47003c300d3379cf7b5baa1bdc1e.jpg">
-									</div>
-									<div class="comments__name-wrap">
-										<div class="comments__user-name">Ковальчук Дмитрий</div>
-										<div class="comments__user-status">основатель Loftschool</div>
-									</div>
-								</div>
-							</li>
-							<li class="comments__item">
-								<div class="comments__icon">
-									<!--include ../../static/images/otherIcons/quote-left.svg-->
-								</div>
-								<div class="comments__content">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
-								<div class="comments__user">
-									<div class="comments__avatar">
-										<img class="comments__img" src="images/16a72bfe05c4da42694cce257771da79.jpg">
-									</div>
-									<div class="comments__name-wrap">
-										<div class="comments__user-name">Сабанцев Владимир</div>
-										<div class="comments__user-status">преподаватель</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="contact-form" id="contact-form">
-						<div class="contact-form__blur" id="blur"></div>
-						<form class="contact-form__form" id="contacts" action="/contact" method="POST" enctype="application/x-www-form-urlencoded">
-							<h3 class="contact-form__heading heading heading_medium">
-								<div class="heading__content">Связаться со мной</div>
-							</h3>
-							<input class="contact-form__input" id="name" name="name" placeholder="Имя">
-							<input class="contact-form__input" id="email" name="email" type="email" placeholder="Email">
-							<textarea class="contact-form__textarea" id="message" name="message" placeholder="Ваше сообщение"></textarea>
-						</form>
-						<div class="contact-form__controls">
-							<button class="contact-form__button" type="submit" form="contacts">Отправить</button>
-							<button class="contact-form__button" type="reset" form="contacts">Очистить</button>
-						</div>
-					</div>
-					<button class="arrow feedback__arrow" id="arrowUp">
-						<?xml version="1.0" encoding="utf-8"?>
-						<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-						<svg class="svgArrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-						 x="0px" y="0px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve">
-							<g>
-								<path fill="#FFFFFF" d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422
-		l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578
-		c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z" />
-							</g>
-						</svg>
-
-					</button>
-				</div>
-			</section>
-		</div>
-		<footer class="footer">
-			<div class="footer__row">
-				<nav class="nav footer__nav nav_horizontal nav_color_white">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a class="nav__link" href="portfolio">Мои работы</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="about">Обо мне</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="blog">Блог</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="/">Авторизация</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="footer__socials">
-					<ul class="socials socials_color_white">
-						<li class="social__item">
-							<a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru-ru.facebook.com/people/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2-%D0%A3%D1%81%D1%82%D1%8E%D0%B6%D0%B0%D0%BD%D0%B8%D0%BD/100012321937974">
-								<?xml version="1.0" encoding="iso-8859-1"?>
-								<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								 width="40px" height="40px" viewBox="0 0 167.657 167.657" style="enable-background:new 0 0 167.657 167.657;" xml:space="preserve">
-									<g>
-										<path d="M83.829,0.349C37.532,0.349,0,37.881,0,84.178c0,41.523,30.222,75.911,69.848,82.57v-65.081H49.626
+            </button>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__row">
+                    <nav class="nav footer__nav nav_horizontal nav_color_white">
+                      <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="portfolio.html">Мои работы</a></li>
+                        <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                        <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
+                      </ul>
+                    </nav>
+          <div class="footer__socials">
+                        <ul class="socials socials_color_white">
+                          <li class="social__item"><a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru-ru.facebook.com/people/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2-%D0%A3%D1%81%D1%82%D1%8E%D0%B6%D0%B0%D0%BD%D0%B8%D0%BD/100012321937974"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+	 viewBox="0 0 167.657 167.657" style="enable-background:new 0 0 167.657 167.657;" xml:space="preserve">
+<g>
+	<path d="M83.829,0.349C37.532,0.349,0,37.881,0,84.178c0,41.523,30.222,75.911,69.848,82.57v-65.081H49.626
 		v-23.42h20.222V60.978c0-20.037,12.238-30.956,30.115-30.956c8.562,0,15.92,0.638,18.056,0.919v20.944l-12.399,0.006
 		c-9.72,0-11.594,4.618-11.594,11.397v14.947h23.193l-3.025,23.42H94.026v65.653c41.476-5.048,73.631-40.312,73.631-83.154
-		C167.657,37.881,130.125,0.349,83.829,0.349z" />
-									</g>
-								</svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__icon social__icon_gh" target="_blank" rel="nofollow noopener" href="https://github.com/Ustasjs">
-								<?xml version="1.0" encoding="utf-8"?>
-								<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-								<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								 width="40px" height="40px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-									<g>
-										<path d="M30.5,24.5c-1.031,0-2.016,0.188-3.047,0.328C26.641,24.953,25.828,25,25,25s-1.641-0.047-2.453-0.172
+		C167.657,37.881,130.125,0.349,83.829,0.349z"/>
+</g>
+</svg>
+</a></li>
+                          <li class="social__item"><a class="social__icon social__icon_gh" target="_blank" rel="nofollow noopener" href="https://github.com/Ustasjs"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="40px" height="40px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g>
+	<path d="M30.5,24.5c-1.031,0-2.016,0.188-3.047,0.328C26.641,24.953,25.828,25,25,25s-1.641-0.047-2.453-0.172
 		C21.531,24.688,20.531,24.5,19.5,24.5c-2.547,0-4,2.109-4,4.5c0,4.781,4.375,5.516,8.188,5.516h2.625
 		c3.813,0,8.188-0.734,8.188-5.516C34.5,26.609,33.047,24.5,30.5,24.5z M20,32c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3
-		S21.406,32,20,32z M30,32c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3S31.406,32,30,32z" />
-										<path d="M25,0C11.192,0,0,11.193,0,25s11.192,25,25,25s25-11.193,25-25S38.808,0,25,0z M37.047,31.422
+		S21.406,32,20,32z M30,32c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3S31.406,32,30,32z"/>
+	<path d="M25,0C11.192,0,0,11.193,0,25s11.192,25,25,25s25-11.193,25-25S38.808,0,25,0z M37.047,31.422
 		C34.984,35.594,29.313,36,25.25,36c-4.125,0-10.141-0.359-12.281-4.578C12.172,29.844,12,27.984,12,26.25
 		c0-2.281,0.625-4.438,2.125-6.188c-0.281-0.859-0.422-1.766-0.422-2.656c0-1.172,0.266-2.344,0.797-3.406
 		c2.469,0,4.047,1.078,5.922,2.547C22,16.172,23.625,16,25.25,16c1.469,0,2.953,0.156,4.375,0.5c1.859-1.453,3.438-2.5,5.875-2.5
 		c0.531,1.063,0.797,2.234,0.797,3.406c0,0.891-0.141,1.781-0.422,2.625C37.375,21.797,38,23.969,38,26.25
-		C38,27.984,37.828,29.828,37.047,31.422z" />
-									</g>
-								</svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru.linkedin.com">
-								<?xml version="1.0" encoding="utf-8"?>
-								<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-								<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								 width="40px" height="40px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-									<path d="M25,0C11.192,0,0,11.193,0,25s11.192,25,25,25s25-11.193,25-25S38.808,0,25,0z M19.453,34.136h-5.156V18.651
+		C38,27.984,37.828,29.828,37.047,31.422z"/>
+</g>
+</svg>
+</a></li>
+                          <li class="social__item"><a class="social__icon" target="_blank" rel="nofollow noopener" href="https://ru.linkedin.com"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="40px" height="40px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<path d="M25,0C11.192,0,0,11.193,0,25s11.192,25,25,25s25-11.193,25-25S38.808,0,25,0z M19.453,34.136h-5.156V18.651
 	h5.156V34.136z M16.875,16.542h-0.031c-1.734,0-2.844-1.188-2.844-2.672c0-1.516,1.156-2.672,2.906-2.672
 	c1.766,0,2.859,1.156,2.875,2.672C19.797,15.354,18.672,16.542,16.875,16.542z M38,34.136h-5.141v-8.281c0-2.078-0.75-3.5-2.609-3.5
 	c-1.422,0-2.266,0.953-2.641,1.875c-0.125,0.344-0.172,0.797-0.172,1.266v8.641h-5.141c0.063-14.031,0-15.484,0-15.484h5.141v2.204
-	c0.678-1.061,1.898-2.563,4.641-2.563c3.391,0,5.922,2.219,5.922,6.969V34.136z" />
-								</svg>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer__row">
-				<div class="footer__info">
-					<span class="footer__text">Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </span>
-				</div>
-				<div class="footer__copy">
-					<span class="footer__text">&copy;Устюжанин Станислав | Создано с любовью в LoftSchool | 2018</span>
-				</div>
-			</div>
-		</footer>
-	</div>
-</body>
-
+	c0.678-1.061,1.898-2.563,4.641-2.563c3.391,0,5.922,2.219,5.922,6.969V34.136z"/>
+</svg>
+</a></li>
+                        </ul>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__info"> <span class="footer__text">Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </span></div>
+          <div class="footer__copy"> <span class="footer__text">&copy;Устюжанин Станислав | Создано с любовью в LoftSchool | 2018</span></div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

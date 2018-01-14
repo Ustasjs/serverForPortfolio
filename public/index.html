@@ -94,9 +94,9 @@
               </div>
                             <nav class="nav nav_color_green nav_horizontal">
                               <ul class="nav__list">
-                                <li class="nav__item"><a class="nav__link" href="portfolio">Мои работы</a></li>
-                                <li class="nav__item"><a class="nav__link" href="about">Обо мне</a></li>
-                                <li class="nav__item"><a class="nav__link" href="blog">Блог</a></li>
+                                <li class="nav__item"><a class="nav__link" href="portfolio.html">Мои работы</a></li>
+                                <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                                <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
                               </ul>
                             </nav>
             </div>
@@ -107,7 +107,7 @@
                 </h2>
                 <form class="auth__form" id="authForm" action="POST">
                   <div class="auth__input-wrap auth__input-wrap_login">
-                    <input class="auth__input" id="login" placeholder="Логин">
+                    <input class="auth__input" id="login" placeholder="Логин" name="login">
                     <div class="auth__icon"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -124,7 +124,7 @@
                     </div>
                   </div>
                   <div class="auth__input-wrap auth__input-wrap_password">
-                    <input class="auth__input" id="password" placeholder="Пароль">
+                    <input class="auth__input" id="password" placeholder="Пароль" name="password">
                     <div class="auth__icon"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -145,13 +145,13 @@
                     </div>
                   </div>
                   <label class="auth__label">
-                    <input class="auth__checkbox" type="checkbox">
+                    <input class="auth__checkbox" type="checkbox" name="humanCheck">
                     <div class="auth__custom-checkbox"></div><span class="auth__label-text">Я человек</span>
                   </label>
                   <div class="auth__question">Вы точно не робот?</div>
                   <div class="auth__question-wrap">
                     <label class="auth__label">
-                      <input class="auth__radio" type="radio" name="question" value="Yes">
+                      <input class="auth__radio" id="radioYes" type="radio" name="question" value="Yes">
                       <div class="auth__custom-radio"></div><span class="auth__label-text">Да</span>
                     </label>
                     <label class="auth__label">

@@ -10,6 +10,14 @@ const PortfolioSchema = new Schema({
     type: String,
     required: [true, 'Укажите используемые технологии']
   },
+  link: {
+    type: String,
+    required: [true, 'Укажите ссылку на проект']
+  },
+  description: {
+    type: String,
+    required: [true, 'Укажите описание проекта']
+  },
   path: {
     type: String
   }

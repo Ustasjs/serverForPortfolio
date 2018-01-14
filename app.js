@@ -1,15 +1,28 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const config = require('./config/config.json');
 require('./api/models/db');
 
-var index = require('./routes/index');
-var indexApi = require('./api/routes/index');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
-var app = express();
+const index = require('./routes/index');
+const indexApi = require('./api/routes/index');
+
+const app = express();
+
+const isAdmin = function (req, res, next) {
+  if (req.session.isAdmin) {
+    return next();
+  } else {
+    res.redirect('/');
+  }
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,12 +34,26 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+app.use(session({
+  secret: config.session.secret,
+  cookie: {
+    path: '/',
+    httpOnly: true,
+    maxAge: null
+  },
+  saveUninitialized: false,
+  resave: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // cors убрать на продакшене
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "http://localhost:9000");
+  res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
@@ -49,13 +76,13 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "blog.html"))
 });
 
-app.get('/adminpanel/', (req, res) => {
+app.get('/adminpanel', isAdmin, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "admin.html"))
 });
-app.get('/adminpanel/blog', (req, res) => {
+app.get('/adminpanel/blog', isAdmin, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "admin.html"))
 });
-app.get('/adminpanel/works', (req, res) => {
+app.get('/adminpanel/works', isAdmin, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', "admin.html"))
 });
 

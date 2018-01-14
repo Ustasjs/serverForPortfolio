@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const multiparty = require('multiparty');
 const utils = require('../../utils');
 
 module.exports.getArticles = function (req, res) {
@@ -18,28 +17,23 @@ module.exports.getArticles = function (req, res) {
 
 module.exports.createArticle = function (req, res) {
   const Blog = mongoose.model('blog');
-  const data = new multiparty.Form();
+  const body = req.body;
 
-  data.parse(req, function (err, fields) {
-    if (err) {
-      res.status(400).json({ message: `При парсинге данных произошла ошибка ${err.message}` });
-    }
+  const item = new Blog({
+    name: body.name,
+    date: new Date(body.date),
+    content: body.content
+  });
 
-    const item = new Blog({
-      name: fields.name,
-      date: new Date(fields.date),
-      content: fields.content
+  item
+    .save()
+    .then(item => {
+      res.status(201).json({ message: 'Запись успешно добавлена' });
+    })
+    .catch(err => {
+      res.status(400).json({ message: `При добавлении записи произошла ошибка ${err.message}` });
     });
 
-    item
-      .save()
-      .then(item => {
-        res.status(201).json({ message: 'Запись успешно добавлена' });
-      })
-      .catch(err => {
-        res.status(400).json({ message: `При добавлении записи произошла ошибка ${err.message}` });
-      });
-  })
 }
 
 module.exports.deleteArticle = function (req, res) {

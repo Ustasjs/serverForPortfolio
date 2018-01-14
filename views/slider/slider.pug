@@ -1,0 +1,29 @@
+.info.slider__info
+  .info__wrap
+    h3.info__heading.heading.heading_medium
+      #headingContent.heading__content= works[0].name
+    #stackContent.info__stack= works[0].stack
+    a#infoLink.info__link(href=`${works[0].link}`)
+      span.info__link-text Посмотреть сайт
+.slider__main
+  ul.slider__list
+    each project, index in works
+      li.slider__main-wrap(class=(index===0 ? 'slider__main-wrap_active' : ''))
+        img.slider__img(src=`${project.path}`, alt="Текущий проект")
+.slider__controls
+  .slider__control
+    ul.slider__list.slider__list_down
+      each project, index in works
+        li.slider__wrap(class=(index===(works.length - 1) ? 'slider__wrap_active' : ''))
+          img.slider__img(src=`${project.path}`, alt="Предыдущий проект")
+    .slider__button.slider__button_down
+      .slider__arrow-img.slider__arrow-img_down
+        include ./arrow_down.svg
+  .slider__control
+    ul.slider__list.slider__list_up
+      each project, index in works
+        li.slider__wrap(class=(index===1 ? 'slider__wrap_active' : ''))
+          img.slider__img(src=`${project.path}`, alt="Предыдущий проект")
+    .slider__button.slider__button_up
+      .slider__arrow-img.slider__arrow-img_up
+        include ./arrow_down.svg

@@ -3,6 +3,7 @@ const config = require('../../config/config');
 require('./blog');
 require('./portfolio');
 require('./skills');
+require('./user');
 
 mongoose.Promise = global.Promise;
 

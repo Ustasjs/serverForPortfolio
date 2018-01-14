@@ -4,6 +4,7 @@ const ctrlBlog = require('../controllers/blog');
 const ctrlPortfolio = require('../controllers/portfolio');
 const ctrlSkills = require('../controllers/skills');
 const ctrlTemplate = require('../controllers/template');
+const ctrlUser = require('../controllers/user');
 
 
 // Blog
@@ -25,5 +26,9 @@ router.delete('/skills:id', ctrlSkills.deleteSkill);
 // Templates
 router.get('/template/blog', ctrlTemplate.getBlogTemplate);
 router.get('/template/skills', ctrlTemplate.getSkillsTemplate);
+router.get('/template/portfolio', ctrlTemplate.getPortfolioTemplate);
+
+// Auth
+router.post('/user', ctrlUser.isAuth);
 
 module.exports = router;

@@ -58,10 +58,18 @@ module.exports.createWork = function (req, res) {
         }
       });
 
+      const filePathForBD = fileName.split('\\').slice(1).join('\\');
+      let link = fields.link.toString();
+      if (link.indexOf('://') === -1) {
+        link = 'http://' + link
+      }
+
       const item = new Portfolio({
         name: fields.name,
         stack: fields.stack,
-        path: fileName
+        link: link,
+        description: fields.description,
+        path: filePathForBD
       });
 
       item
