@@ -61,7 +61,9 @@ module.exports.createWork = function (req, res) {
 
       logger.info('filePath', filePath, typeof filePath);
 
-      const filePathForBD = path.join('upload', path.parse(fileName).base);
+      const parsedFilePath = path.parse(fileName);
+
+      const filePathForBD = path.join('upload', parsedFilePath.base)
       let link = fields.link.toString();
       if (link.indexOf('://') === -1) {
         link = 'http://' + link
