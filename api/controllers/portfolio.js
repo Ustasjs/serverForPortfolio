@@ -3,6 +3,7 @@ const multiparty = require('multiparty');
 const fs = require('fs');
 const path = require('path');
 const utils = require('../../utils');
+const logger = require('../../logger');
 
 
 module.exports.getWorks = function (req, res) {
@@ -58,11 +59,15 @@ module.exports.createWork = function (req, res) {
         }
       });
 
+      logger.info('filePath', filePath, typeof filePath);
+
       const filePathForBD = fileName.split('\\').slice(1).join('\\');
       let link = fields.link.toString();
       if (link.indexOf('://') === -1) {
         link = 'http://' + link
       }
+
+      logger.info('filePathForBD', filePathForBD, typeof filePath);
 
       const item = new Portfolio({
         name: fields.name,
