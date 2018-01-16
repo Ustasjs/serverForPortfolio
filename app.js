@@ -11,14 +11,10 @@ const logger = require('./logger');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-
 const index = require('./routes/index');
 const indexApi = require('./api/routes/index');
 
 const app = express();
-
-console.log(app.get('env'));
-logger.info(app.get('env'));
 
 const isAdmin = function (req, res, next) {
   if (req.session.isAdmin) {
