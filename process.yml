@@ -1,6 +1,5 @@
 apps:
   - script : ./bin/www
-    watch  : true
     name  : serverForPortfolio
     env    :
       NODE_ENV: production

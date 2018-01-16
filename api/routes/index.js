@@ -5,10 +5,13 @@ const ctrlPortfolio = require('../controllers/portfolio');
 const ctrlSkills = require('../controllers/skills');
 const ctrlTemplate = require('../controllers/template');
 const ctrlUser = require('../controllers/user');
+const logger = require('./logger');
 
 let isAdmin = function (req, res, next) {
   return next();
 };
+
+logger.info('----', process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'production') {
   isAdmin = function (req, res, next) {
