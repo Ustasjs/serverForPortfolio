@@ -59,8 +59,6 @@ module.exports.createWork = function (req, res) {
         }
       });
 
-      logger.info('filePath', filePath, typeof filePath);
-
       const parsedFilePath = path.parse(fileName);
 
       const filePathForBD = path.join('upload', parsedFilePath.base)
@@ -68,8 +66,6 @@ module.exports.createWork = function (req, res) {
       if (link.indexOf('://') === -1) {
         link = 'http://' + link
       }
-
-      logger.info('filePathForBD', filePathForBD, typeof filePath);
 
       const item = new Portfolio({
         name: fields.name,
