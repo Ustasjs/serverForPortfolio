@@ -20,7 +20,4 @@ const logger = new (winston.Logger)({
   exitOnError: false
 });
 
-logger.log('info', 'Hello log files!')
-logger.info('Hello again log files!')
-
 module.exports = logger;

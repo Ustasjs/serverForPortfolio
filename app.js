@@ -17,7 +17,8 @@ const indexApi = require('./api/routes/index');
 
 const app = express();
 
-console.log(app.get('env'))
+console.log(app.get('env'));
+logger.info(app.get('env'));
 
 const isAdmin = function (req, res, next) {
   if (req.session.isAdmin) {
