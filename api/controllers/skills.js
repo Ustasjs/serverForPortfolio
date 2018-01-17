@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const multiparty = require('multiparty');
+const logger = require('../../logger');
 const utils = require('../../utils');
 
 module.exports.getSkills = function (req, res) {
@@ -11,7 +12,7 @@ module.exports.getSkills = function (req, res) {
       res.status(200).json({ skills: items });
     })
     .catch(e => {
-      console.log(e);
+      logger.error(e);
       res.status(400).json({ message: `Произошла ошибка ${err.message}` });
     })
 }

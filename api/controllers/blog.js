@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const logger = require('../../logger');
 const utils = require('../../utils');
 
 module.exports.getArticles = function (req, res) {
@@ -10,7 +11,7 @@ module.exports.getArticles = function (req, res) {
       res.status(200).json({ articles: items });
     })
     .catch(e => {
-      console.log(e);
+      logger.error(e);
       res.status(400).json({ message: `Произошла ошибка ${err.message}` });
     })
 }

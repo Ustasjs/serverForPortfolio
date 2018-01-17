@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 module.exports.isAuth = function isAyth(req, res) {
-  console.log('api user');
   const User = mongoose.model('user');
 
   User

@@ -1,6 +1,7 @@
 const pug = require('pug');
 const mongoose = require('mongoose');
 const utils = require('../../utils');
+const logger = require('../../logger');
 const articles = './views/articles/articles.pug';
 const contentList = './views/articles/contentList.pug';
 const skills = './views/skills/skills.pug';
@@ -22,7 +23,7 @@ module.exports.getBlogTemplate = function (req, res) {
       res.status(200).json(resultData);
     })
     .catch(e => {
-      console.log(e);
+      logger.error(e);
       res.status(400).json({ message: `Произошла ошибка ${err.message}` });
     })
 }
@@ -47,7 +48,7 @@ module.exports.getSkillsTemplate = function (req, res) {
       res.status(200).json(resultData);
     })
     .catch(e => {
-      console.log(e);
+      logger.error(e);
       res.status(400).json({ message: `Произошла ошибка ${err.message}` });
     })
 }
@@ -68,7 +69,7 @@ module.exports.getPortfolioTemplate = function (req, res) {
       res.status(200).json(resultData);
     })
     .catch(e => {
-      console.log(e);
+      logger.error(e);
       res.status(400).json({ message: `Произошла ошибка ${err.message}` });
     })
 }

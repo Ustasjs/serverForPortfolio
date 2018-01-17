@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const readline = require('readline');
+const logger = require('./logger');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -17,6 +18,7 @@ mongoose
   })
   .catch(e => {
     console.error(e);
+    logger.error(e.message);
     throw e;
   });
 
@@ -45,7 +47,14 @@ rl.on('close', () => {
 
       return adminUser.save();
     })
-    .then(user => console.log('Ок!'), error => console.error(error.message))
+    .then(user => {
+      console.log('Ок!');
+      logger.info('Ок!');
+    },
+    error => {
+      console.error(error.message);
+      logger.error(error.message);
+    })
     .then(() => {
       mongoose.connection.close(() => process.exit(0));
     })

@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const logger = require('../logger');
 const config = require('../config/config.json');
 
 
@@ -30,7 +31,7 @@ module.exports.sendEmail = function (req, res) {
       return;
     })
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res.status(400).json({ message: `$Произошла ошибка: ${error.message}` });
   }
 }

@@ -14,7 +14,7 @@ module.exports.getWorks = function (req, res) {
     items = items.map(elem => utils.toClient(elem));
     res.status(200).json({ works: items });
   }).catch(e => {
-    console.log(e);
+    logger.error(e);
     res.status(400).json({ message: `Произошла ошибка ${err.message}` });
   })
 }

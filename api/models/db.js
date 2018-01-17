@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('../../config/config');
+const logger = require('../../logger');
 require('./blog');
 require('./portfolio');
 require('./skills');
@@ -12,7 +13,7 @@ mongoose
     useMongoClient: true
   })
   .catch(e => {
-    console.error(e);
+    logger.error(e);
     throw e;
   });
 
@@ -27,6 +28,7 @@ mongoose.connection.on('connected', function () {
 // If the connection throws an error
 mongoose.connection.on('error', function (err) {
   console.log('Mongoose default connection error: ' + err);
+  logger.error('Mongoose default connection error: ' + err);
 });
 
 // When the connection is disconnected
