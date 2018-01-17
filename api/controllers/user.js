@@ -8,11 +8,11 @@ module.exports.isAuth = function isAyth(req, res) {
     .findOne({ login: req.body.login })
     .then(user => {
       if (!user) {
-        return res.status(400).json({ status: 'error', message: 'Логин или пароль введены не верно' });
+        return res.status(400).json({ status: 'error', message: 'Логин или пароль введены неверно' });
       }
 
       if (!user.validPassword(req.body.password)) {
-        return res.status(400).json({ status: 'error', message: 'Логин или пароль введены не верно' });
+        return res.status(400).json({ status: 'error', message: 'Логин или пароль введены неверно' });
       } else {
         res.status(200).json({ status: 'ok', message: 'Авторизация прошла успешно' });
       }

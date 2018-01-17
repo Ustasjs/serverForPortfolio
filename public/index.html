@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Портфолио</title>
-  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></head>
+  <link href="/./css/common.css" rel="stylesheet"><link href="/./css/index.css" rel="stylesheet"><script type="text/javascript" src="/js/common.js"></script><script type="text/javascript" src="/js/index.js"></script></head>
   <body>
     <div class="wrapper wrapper_welcome" id="container">
 <div class="preloader-modal" id="preloaderModal">
@@ -23,15 +23,15 @@
   </div>
 </div>
 <div class="parallax" id="parallax">
-  <div class="parallax_layer parallax__layer_8"><img class="parallax__img" src="images/bd90def82ddf601a0635882060ba6709.png"></div>
-  <div class="parallax_layer parallax__layer_7"><img class="parallax__img" src="images/da66e23c5eb61bf999c24a65e30ce6f6.png"></div>
-  <div class="parallax_layer parallax__layer_6"><img class="parallax__img" src="images/05489db2d0989e1d8ce524eb21be5b45.png"></div>
-  <div class="parallax_layer parallax__layer_5"><img class="parallax__img" src="images/29e187155b0c793d778223b1deeee716.png"></div>
-  <div class="parallax_layer parallax__layer_4"><img class="parallax__img" src="images/4725c47d898641e3241851a6add74cec.png"></div>
-  <div class="parallax_layer parallax__layer_3"><img class="parallax__img" src="images/ed9c6ade402f884cb3bdb3f423379c7c.png"></div>
-  <div class="parallax_layer parallax__layer_2"><img class="parallax__img" src="images/b4cf5cc9a33747b82719d869bc7de9a7.png"></div>
-  <div class="parallax_layer parallax__layer_1"><img class="parallax__img" src="images/ec33a71e93d5ce5f79021d39d4dbed68.png"></div>
-  <div class="parallax_layer parallax__layer_0"><img class="parallax__img" src="images/d48d6d2f6c024db8d2da0035efa789b6.png"></div>
+  <div class="parallax_layer parallax__layer_8"><img class="parallax__img" src="/images/bd90def82ddf601a0635882060ba6709.png"></div>
+  <div class="parallax_layer parallax__layer_7"><img class="parallax__img" src="/images/da66e23c5eb61bf999c24a65e30ce6f6.png"></div>
+  <div class="parallax_layer parallax__layer_6"><img class="parallax__img" src="/images/05489db2d0989e1d8ce524eb21be5b45.png"></div>
+  <div class="parallax_layer parallax__layer_5"><img class="parallax__img" src="/images/29e187155b0c793d778223b1deeee716.png"></div>
+  <div class="parallax_layer parallax__layer_4"><img class="parallax__img" src="/images/4725c47d898641e3241851a6add74cec.png"></div>
+  <div class="parallax_layer parallax__layer_3"><img class="parallax__img" src="/images/ed9c6ade402f884cb3bdb3f423379c7c.png"></div>
+  <div class="parallax_layer parallax__layer_2"><img class="parallax__img" src="/images/b4cf5cc9a33747b82719d869bc7de9a7.png"></div>
+  <div class="parallax_layer parallax__layer_1"><img class="parallax__img" src="/images/ec33a71e93d5ce5f79021d39d4dbed68.png"></div>
+  <div class="parallax_layer parallax__layer_0"><img class="parallax__img" src="/images/d48d6d2f6c024db8d2da0035efa789b6.png"></div>
 </div>
       <div class="header welcome__header">
         <button class="auth-button header__button" id="authButton"><span class="auth-button__text">Авторизоваться</span></button>
@@ -42,7 +42,7 @@
             <div class="hero main__hero" id="hero">
               <div class="hero__main">
                                 <div class="user" id="user">
-                                  <div class="user__wrap"><img class="user__img" src="images/1a3938ea32883c7272dbc496ecc4edbb.jpg" alt="Мое фото"></div>
+                                  <div class="user__wrap"><img class="user__img" src="/images/1a3938ea32883c7272dbc496ecc4edbb.jpg" alt="Мое фото"></div>
                                   <h2 class="user__heading heading">Устюжанин Станислав</h2>
                                   <div class="user__info">Личный сайт веб разработчика</div>
                                 </div>
@@ -124,7 +124,7 @@
                     </div>
                   </div>
                   <div class="auth__input-wrap auth__input-wrap_password">
-                    <input class="auth__input" id="password" placeholder="Пароль" name="password">
+                    <input class="auth__input" id="password" placeholder="Пароль" name="password" type="password">
                     <div class="auth__icon"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -146,7 +146,7 @@
                   </div>
                   <label class="auth__label">
                     <input class="auth__checkbox" type="checkbox" name="humanCheck">
-                    <div class="auth__custom-checkbox"></div><span class="auth__label-text">Я человек</span>
+                    <div class="auth__custom-checkbox" id="styledHumanCheck"></div><span class="auth__label-text">Я человек</span>
                   </label>
                   <div class="auth__question">Вы точно не робот?</div>
                   <div class="auth__question-wrap">
@@ -154,7 +154,7 @@
                       <input class="auth__radio" id="radioYes" type="radio" name="question" value="Yes">
                       <div class="auth__custom-radio"></div><span class="auth__label-text">Да</span>
                     </label>
-                    <label class="auth__label">
+                    <label class="auth__label" id="radioNo">
                       <input class="auth__radio" type="radio" name="question" value="No">
                       <div class="auth__custom-radio"></div><span class="auth__label-text">Не уверен</span>
                     </label>
