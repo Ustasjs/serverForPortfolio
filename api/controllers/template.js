@@ -6,6 +6,7 @@ const articles = './views/articles/articles.pug';
 const contentList = './views/articles/contentList.pug';
 const skills = './views/skills/skills.pug';
 const slider = './views/slider/slider.pug';
+const emptyDbMessage = './views/emptyDbMessage/emptyDbMessage.pug';
 
 
 module.exports.getBlogTemplate = function (req, res) {
@@ -17,6 +18,12 @@ module.exports.getBlogTemplate = function (req, res) {
       items = items.map(elem => utils.dateForBlog(elem));
       const locals = { articles: items };
 
+      if (locals.articles < 1) {
+        const message = { type: 'Empty' };
+        res.status(200).json(message);
+        return;
+      }
+
       resultData.articles = pug.renderFile(articles, locals);
       resultData.contentList = pug.renderFile(contentList, locals);
 
@@ -24,7 +31,7 @@ module.exports.getBlogTemplate = function (req, res) {
     })
     .catch(e => {
       logger.error(e);
-      res.status(400).json({ message: `Произошла ошибка ${err.message}` });
+      res.status(400).json({ message: `Произошла ошибка ${e.message}` });
     })
 }
 
@@ -41,7 +48,13 @@ module.exports.getSkillsTemplate = function (req, res) {
         }
         return prevValue;
       }, []);
-      const locals = { skills: items, skillsTypes };
+      let locals = { skills: items, skillsTypes };
+
+      if (locals.skills < 1) {
+        const message = { type: 'Empty' };
+        res.status(200).json(message);
+        return;
+      }
 
       resultData = pug.renderFile(skills, locals);
 
@@ -49,19 +62,25 @@ module.exports.getSkillsTemplate = function (req, res) {
     })
     .catch(e => {
       logger.error(e);
-      res.status(400).json({ message: `Произошла ошибка ${err.message}` });
+      res.status(400).json({ message: `Произошла ошибка ${e.message}` });
     })
 }
 
 
 module.exports.getPortfolioTemplate = function (req, res) {
   let resultData = {};
-  const Blog = mongoose.model('work');
+  const Portfolio = mongoose.model('work');
 
-  Blog.find()
+  Portfolio.find()
     .then(items => {
       items = items.map(elem => utils.toClient(elem));
-      const locals = { works: items };
+      let locals = { works: items };
+
+      if (locals.works < 1) {
+        const message = { type: 'Empty' };
+        res.status(200).json(message);
+        return;
+      }
 
       resultData.html = pug.renderFile(slider, locals);
       resultData.data = items;
@@ -70,6 +89,6 @@ module.exports.getPortfolioTemplate = function (req, res) {
     })
     .catch(e => {
       logger.error(e);
-      res.status(400).json({ message: `Произошла ошибка ${err.message}` });
+      res.status(400).json({ message: `Произошла ошибка ${e.message}` });
     })
 }
