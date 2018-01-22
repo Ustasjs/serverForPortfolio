@@ -25,7 +25,7 @@ mongoose
 rl.question('Логин: ', answer => {
   login = answer;
 
-  rl.question('Пароль: ', amswer => {
+  rl.question('Пароль: ', answer => {
     password = answer;
 
     rl.close();
@@ -35,6 +35,8 @@ rl.question('Логин: ', answer => {
 rl.on('close', () => {
   const User = mongoose.model('user');
   const adminUser = new User({ login })
+
+  console.log(login, password);
 
   adminUser.setPassword(password);
 
