@@ -25,7 +25,7 @@ module.exports.autorization = function (req, res, next) {
 
   request(requestOptions, function (error, response, body) {
     if (body.status === 'error') {
-      return res.status(400).json({ message: `${body.message}` });
+      return res.status(430).json({ message: `${body.message}` });
     }
 
     req.session.isAdmin = true;
